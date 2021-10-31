@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(120deg, #f9d976, #fdbba8);
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+}
+
+
+form input,
+form button {
+    padding: 0.2em;
+    font-size: 1.2em;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+#input {
+    outline: none;
+}
+
+form button {
+    cursor: pointer;
+} 
+form button:hover {
+    background-color: #d88771;
+    color: white;
+    border: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    padding: 2em;
+   // border:  solid white 1px;
+   // background-color: rgba(227, 223, 220, 1);
+  
+}
+
+#todo-lista {
+    flex-basis: 50%;
+    margin-left: 0;
+    list-style: none;
+}
+
+.todo {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.li-item {
+    flex: 1;
+    background-color: white;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.check-item {
+    background: rgb(73, 204, 73);
+    border: none;
+    padding: 0.7em;
+    cursor: pointer;
+}
+
+.remove-item {
+    background: #ff6f47;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.7em;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.checked {
+    text-decoration: line-through;
+    .li-item {
+        opacity: 0.5;
+        transition: all 0.5s ease;
+    }
+}
+
+.deleted {
+    animation: animacija 1s ease;
+    opacity: 0;
+}
+
+@keyframes animacija {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(0, 100px) rotateZ(20deg);
+    }
+    100% {
+        transform: translate(0, 100px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
